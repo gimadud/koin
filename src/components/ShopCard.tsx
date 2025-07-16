@@ -1,19 +1,6 @@
 import '../styles/ShopCard.css'; 
-
-
-type Shop = {
-  id: number;
-  name: string;
-  phone: string;
-  average_rate: number;
-  review_count: number;
-  open: {
-    day_of_week: string;
-    closed: boolean;
-    open_time: string;
-    close_time: string;
-  }[];
-};
+import type { Shop } from '../types/shop';
+import ShopTags from './ShopTags';
 
 function getTodayOperatingTime(shop: Shop) {
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
@@ -22,15 +9,22 @@ function getTodayOperatingTime(shop: Shop) {
   return `${todayInfo.open_time}~${todayInfo.close_time}`;
 }
 
-export default function ShopCard({ shop }: { shop: Shop }) {
-  if (!shop) return null;
-
+const ShopCard = ({ shop }: { shop: Shop }) => {
   return (
     <div className='shop-card'>
       <h3>{shop.name}</h3>
       <p>⭐ {shop.average_rate} ({shop.review_count} 리뷰)</p>
       <p>전화번호: {shop.phone}</p>
       <p>운영시간: {getTodayOperatingTime(shop)}</p>
+      
+      <ShopTags
+      className="shop-tags"
+      pay_card={shop.pay_card}
+      pay_bank={shop.pay_bank}
+      delivery={shop.delivery}
+      />
     </div>
   );
-}
+};
+
+export default ShopCard;
