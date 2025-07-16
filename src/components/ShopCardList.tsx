@@ -2,20 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import ShopCard from './ShopCard';
 import '../styles/ShopCardList.css'; 
-
-type Shop = {
-  id: number;
-  name: string;
-  phone: string;
-  average_rate: number;
-  review_count: number;
-  open: {
-    day_of_week: string;
-    closed: boolean;
-    open_time: string;
-    close_time: string;
-  }[];
-};
+import type { Shop } from '../types/Shop';
 
 export default function ShopCardList() {
   const { data, isLoading } = useQuery({
