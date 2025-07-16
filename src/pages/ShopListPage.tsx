@@ -1,4 +1,3 @@
-// src/pages/StoreListPage.tsx
 import React from 'react';
 import CategoryList from '../components/CategoryTab';
 import ShopCardList from '../components/ShopCardList';
