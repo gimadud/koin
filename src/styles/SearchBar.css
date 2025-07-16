@@ -1,27 +1,37 @@
 .search-bar {
     width: 1200px;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 1px solid #d2dae2;
     border-top: 1px solid #185c8c;
 }
 
 .search-bar input {
-    height: 50px;
+    height: 45px;
     flex: 1;
     padding: 5px;
-    color: #ccc;
+    color: #d2dae2;
     font-size: 20px;
     border: 1px solid white;
 }
 
+input::placeholder {
+  color: #d2dae2;
+}
+
+
 .search-bar button {
     width: 100px;
-    height: 64px;
+    height: 45px;
     background-color: white;
-    color: #ccc;
+    color: #d2dae2;
     font-size: 20px;
     border: none;
     cursor: pointer;
+}
+
+.search-button img{
+    width: 25px;
+    height: 25px;
 }
