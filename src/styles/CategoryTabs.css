@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 12px 0;
+  justify-content: center;
+}
+
+.categoryItem {
+  text-align: center;
+  width: 60px;
+}
+
+.categoryImage {
+  width: 50px;
+  height: 50px;
+}
+
+.categoryName {
+  font-size: 12px;
+}
+
+.category-list {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  width: 1200px;
+  margin: 0 auto; 
+  justify-content: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+h2{
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 30px;
+}

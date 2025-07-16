@@ -1,0 +1,13 @@
+.shop-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  padding: 20px;
+  width: 1200px;
+  margin: 0 auto; 
+}
+
+.page-wrapper {
+  max-width: 1300px;       
+  margin: 0 auto;         
+           
+}

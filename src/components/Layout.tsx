@@ -1,15 +1,16 @@
-// src/components/Layout.tsx
 import Header from './Header';
 import Footer from './Footer';
-import { Outlet } from 'react-router-dom';
 
-const Layout = () => {
+
+type LayoutProps = {
+  children?: React.ReactNode;
+};
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <main>
-        <Outlet /> 
-      </main>
+      <main>{children}</main> 
       <Footer />
     </>
   );

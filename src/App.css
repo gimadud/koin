@@ -1,0 +1,17 @@
+.app-container{
+    padding: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 1300px;
+  margin: 0 auto; 
+}
+
+
+h1{
+    height: 60px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #185c8c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid;
+}

@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { getCategories } from '../api/categories';
+import axios from 'axios';
 
-export const useCategories = () => {
-  return useQuery({
-    queryKey: ['categories'],
-    queryFn: getCategories,
-  });
-};
+useQuery({
+  queryKey: ['categories'],
+  queryFn: async () => {
+    const res = await axios.get('https://api.stage.koreatech.in/shops/categories');
+    return res.data.shop_categories;
+  },
+});
